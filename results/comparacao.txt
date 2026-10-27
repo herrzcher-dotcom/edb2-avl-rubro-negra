@@ -1,0 +1,161 @@
+Experimento comparativo AVL x Rubro-Negra (semente fixa = 42)
+Altura em NÓS no maior caminho; mínima = ceil(log2(n+1)); rotação dupla conta 2; Máx/op = máximo de rotações numa única operação.
+Fase 1 = inserir N chaves na ordem do conjunto; Fase 2 = remover N/2 chaves (ordem aleatória fixa).
+
+=== Conjunto: crescente ===
+
+N = 1000   (altura mínima após inserção = 10)
+Árvore             Fase      Nós   Altura  Prof.méd Rotações     Recolor.      Rot/op     Máx/op
+AVL           inserção      1000       10       8.99        990            -       0.990           1
+AVL            remoção       500       10       8.11         96            -       0.192           4
+Rubro-Negra   inserção      1000       17       9.41        983         4909       0.983           1
+Rubro-Negra    remoção       500       10       8.11        118         1222       0.236           3
+AVL (inserção): LL=0 RR=990 LR=0 RL=0   |   AVL (remoção): LL=25 RR=23 LR=13 RL=11
+BST sem balanceamento (inserção): altura 1000, profundidade média 500.50
+
+N = 10000   (altura mínima após inserção = 14)
+Árvore             Fase      Nós   Altura  Prof.méd Rotações     Recolor.      Rot/op     Máx/op
+AVL           inserção     10000       14      12.36       9986            -       0.999           1
+AVL            remoção      5000       14      11.48        876            -       0.175           4
+Rubro-Negra   inserção     10000       24      12.89       9976        49877       0.998           1
+Rubro-Negra    remoção      5000       15      11.48        985        12195       0.197           3
+AVL (inserção): LL=0 RR=9986 LR=0 RL=0   |   AVL (remoção): LL=204 RR=226 LR=108 RL=115
+BST sem balanceamento (inserção): altura 10000, profundidade média 5000.50
+
+N = 100000   (altura mínima após inserção = 17)
+Árvore             Fase      Nós   Altura  Prof.méd Rotações     Recolor.      Rot/op     Máx/op
+AVL           inserção    100000       17      15.69      99983            -       1.000           1
+AVL            remoção     50000       17      14.80       8337            -       0.167           4
+Rubro-Negra   inserção    100000       31      16.10      99969       499846       1.000           1
+Rubro-Negra    remoção     50000       19      14.82       9193       120908       0.184           3
+AVL (inserção): LL=0 RR=99983 LR=0 RL=0   |   AVL (remoção): LL=1944 RR=1909 LR=1130 RL=1112
+BST sem balanceamento (inserção): não medida (custo O(n^2) neste conjunto)
+
+=== Conjunto: decrescente ===
+
+N = 1000   (altura mínima após inserção = 10)
+Árvore             Fase      Nós   Altura  Prof.méd Rotações     Recolor.      Rot/op     Máx/op
+AVL           inserção      1000       10       8.99        990            -       0.990           1
+AVL            remoção       500       10       8.11         86            -       0.172           3
+Rubro-Negra   inserção      1000       17       9.41        983         4909       0.983           1
+Rubro-Negra    remoção       500       10       8.12         94         1195       0.188           2
+AVL (inserção): LL=990 RR=0 LR=0 RL=0   |   AVL (remoção): LL=22 RR=26 LR=14 RL=5
+BST sem balanceamento (inserção): altura 1000, profundidade média 500.50
+
+N = 10000   (altura mínima após inserção = 14)
+Árvore             Fase      Nós   Altura  Prof.méd Rotações     Recolor.      Rot/op     Máx/op
+AVL           inserção     10000       14      12.36       9986            -       0.999           1
+AVL            remoção      5000       14      11.48        902            -       0.180           3
+Rubro-Negra   inserção     10000       24      12.89       9976        49877       0.998           1
+Rubro-Negra    remoção      5000       14      11.49        986        12126       0.197           3
+AVL (inserção): LL=9986 RR=0 LR=0 RL=0   |   AVL (remoção): LL=191 RR=205 LR=129 RL=124
+BST sem balanceamento (inserção): altura 10000, profundidade média 5000.50
+
+N = 100000   (altura mínima após inserção = 17)
+Árvore             Fase      Nós   Altura  Prof.méd Rotações     Recolor.      Rot/op     Máx/op
+AVL           inserção    100000       17      15.69      99983            -       1.000           1
+AVL            remoção     50000       17      14.81       8332            -       0.167           4
+Rubro-Negra   inserção    100000       31      16.10      99969       499846       1.000           1
+Rubro-Negra    remoção     50000       18      14.80       9272       120868       0.185           3
+AVL (inserção): LL=99983 RR=0 LR=0 RL=0   |   AVL (remoção): LL=1910 RR=1932 LR=1128 RL=1117
+BST sem balanceamento (inserção): não medida (custo O(n^2) neste conjunto)
+
+=== Conjunto: aleatória ===
+
+N = 1000   (altura mínima após inserção = 10)
+Árvore             Fase      Nós   Altura  Prof.méd Rotações     Recolor.      Rot/op     Máx/op
+AVL           inserção      1000       12       9.20        698            -       0.698           2
+AVL            remoção       500       11       8.17        200            -       0.400           4
+Rubro-Negra   inserção      1000       12       9.25        598         2324       0.598           2
+Rubro-Negra    remoção       500       12       8.25        192          932       0.384           3
+AVL (inserção): LL=126 RR=120 LR=112 RL=114   |   AVL (remoção): LL=40 RR=42 LR=31 RL=28
+BST sem balanceamento (inserção): altura 22, profundidade média 12.16
+
+N = 10000   (altura mínima após inserção = 14)
+Árvore             Fase      Nós   Altura  Prof.méd Rotações     Recolor.      Rot/op     Máx/op
+AVL           inserção     10000       16      12.58       6808            -       0.681           2
+AVL            remoção      5000       15      11.55       1864            -       0.373           6
+Rubro-Negra   inserção     10000       16      12.63       5764        23159       0.576           2
+Rubro-Negra    remoção      5000       15      11.60       1742         8756       0.348           3
+AVL (inserção): LL=1167 RR=1215 LR=1134 RL=1079   |   AVL (remoção): LL=390 RR=432 LR=245 RL=276
+BST sem balanceamento (inserção): altura 29, profundidade média 15.94
+
+N = 100000   (altura mínima após inserção = 17)
+Árvore             Fase      Nós   Altura  Prof.méd Rotações     Recolor.      Rot/op     Máx/op
+AVL           inserção    100000       20      15.95      70254            -       0.703           2
+AVL            remoção     50000       19      14.90      18943            -       0.379           7
+Rubro-Negra   inserção    100000       20      15.97      58716       232196       0.587           2
+Rubro-Negra    remoção     50000       20      14.94      18339        88846       0.367           3
+AVL (inserção): LL=11593 RR=11809 LR=11761 RL=11665   |   AVL (remoção): LL=4153 RR=4064 LR=2694 RL=2669
+BST sem balanceamento (inserção): altura 40, profundidade média 20.77
+
+=== Conjunto: em lotes (64 crescentes, lotes embaralhados) ===
+
+N = 1000   (altura mínima após inserção = 10)
+Árvore             Fase      Nós   Altura  Prof.méd Rotações     Recolor.      Rot/op     Máx/op
+AVL           inserção      1000       11       9.19       1034            -       1.034           2
+AVL            remoção       500       11       8.21        125            -       0.250           4
+Rubro-Negra   inserção      1000       16       9.52       1713         4672       1.713           2
+Rubro-Negra    remoção       500       12       8.26        201         1311       0.402           3
+AVL (inserção): LL=20 RR=912 LR=43 RL=8   |   AVL (remoção): LL=32 RR=31 LR=14 RL=17
+BST sem balanceamento (inserção): altura 323, profundidade média 129.17
+
+N = 10000   (altura mínima após inserção = 14)
+Árvore             Fase      Nós   Altura  Prof.méd Rotações     Recolor.      Rot/op     Máx/op
+AVL           inserção     10000       15      12.53      10476            -       1.048           2
+AVL            remoção      5000       15      11.58       1188            -       0.238           6
+Rubro-Negra   inserção     10000       20      12.94      18306        47224       1.831           2
+Rubro-Negra    remoção      5000       16      11.60       1817        12901       0.363           3
+AVL (inserção): LL=223 RR=9021 LR=564 RL=52   |   AVL (remoção): LL=326 RR=280 LR=139 RL=152
+BST sem balanceamento (inserção): altura 641, profundidade média 271.13
+
+N = 100000   (altura mínima após inserção = 17)
+Árvore             Fase      Nós   Altura  Prof.méd Rotações     Recolor.      Rot/op     Máx/op
+AVL           inserção    100000       19      15.98     130616            -       1.306           2
+AVL            remoção     50000       19      14.92      15755            -       0.315           8
+Rubro-Negra   inserção    100000       24      16.27     188153       472471       1.882           2
+Rubro-Negra    remoção     50000       20      14.93      18532       129027       0.371           3
+AVL (inserção): LL=1048 RR=65640 LR=31430 RL=534   |   AVL (remoção): LL=5084 RR=2209 LR=2068 RL=2163
+BST sem balanceamento (inserção): altura 965, profundidade média 426.81
+
+=== Conjunto: alternada (extremos) ===
+
+N = 1000   (altura mínima após inserção = 10)
+Árvore             Fase      Nós   Altura  Prof.méd Rotações     Recolor.      Rot/op     Máx/op
+AVL           inserção      1000       12       9.27       1605            -       1.605           2
+AVL            remoção       500       11       8.20        193            -       0.386           4
+Rubro-Negra   inserção      1000       17       9.41       1477         4909       1.477           2
+Rubro-Negra    remoção       500       11       8.19        115         1214       0.230           2
+AVL (inserção): LL=189 RR=182 LR=305 RL=312   |   AVL (remoção): LL=57 RR=46 LR=21 RL=24
+BST sem balanceamento (inserção): altura 1000, profundidade média 500.50
+
+N = 10000   (altura mínima após inserção = 14)
+Árvore             Fase      Nós   Altura  Prof.méd Rotações     Recolor.      Rot/op     Máx/op
+AVL           inserção     10000       17      12.74      16221            -       1.622           2
+AVL            remoção      5000       15      11.61       1928            -       0.386           7
+Rubro-Negra   inserção     10000       24      12.89      14967        49877       1.497           2
+Rubro-Negra    remoção      5000       15      11.49        997        12211       0.199           3
+AVL (inserção): LL=1880 RR=1865 LR=3111 RL=3127   |   AVL (remoção): LL=579 RR=557 LR=189 RL=207
+BST sem balanceamento (inserção): altura 10000, profundidade média 5000.50
+
+N = 100000   (altura mínima após inserção = 17)
+Árvore             Fase      Nós   Altura  Prof.méd Rotações     Recolor.      Rot/op     Máx/op
+AVL           inserção    100000       21      16.24     162462            -       1.625           2
+AVL            remoção     50000       19      14.98      19142            -       0.383           7
+Rubro-Negra   inserção    100000       31      16.10     149958       499846       1.500           2
+Rubro-Negra    remoção     50000       19      14.86       9212       120849       0.184           3
+AVL (inserção): LL=18758 RR=18738 LR=31231 RL=31252   |   AVL (remoção): LL=5702 RR=5794 LR=1911 RL=1912
+BST sem balanceamento (inserção): não medida (custo O(n^2) neste conjunto)
+
+=== Tempos de execução (N = 100000; mediana de 11 execuções; ordem de grandeza, dependem da máquina) ===
+Conjunto                                        Árvore         Inserir (ms)    1M buscas (ms)   Remover (ms)
+crescente                                       AVL                     32.9             504.9           47.9
+crescente                                       Rubro-Negra             21.1             416.3           31.2
+decrescente                                     AVL                     28.3             422.4           40.9
+decrescente                                     Rubro-Negra             22.7             463.2           35.4
+aleatória                                      AVL                     80.2             504.4           48.4
+aleatória                                      Rubro-Negra             59.1             482.3           34.9
+em lotes (64 crescentes, lotes embaralhados)    AVL                     40.3             543.4           51.2
+em lotes (64 crescentes, lotes embaralhados)    Rubro-Negra             27.3             470.3           33.4
+alternada (extremos)                            AVL                     34.1             496.7           46.6
+alternada (extremos)                            Rubro-Negra             31.0             502.3           43.1

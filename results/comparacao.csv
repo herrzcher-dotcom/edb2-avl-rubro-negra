@@ -1,0 +1,92 @@
+conjunto,N,fase,arvore,nos,altura,altura_minima,prof_media,rotacoes,recoloracoes,LL,RR,LR,RL,operacoes,max_rot_por_op
+"crescente",1000,inserção,AVL,1000,10,10,8.987,990,0,0,990,0,0,1000,1
+"crescente",1000,remoção,AVL,500,10,9,8.108,96,0,25,23,13,11,500,4
+"crescente",1000,inserção,Rubro-Negra,1000,17,10,9.406,983,4909,0,0,0,0,1000,1
+"crescente",1000,remoção,Rubro-Negra,500,10,9,8.114,118,1222,0,0,0,0,500,3
+"crescente",10000,inserção,AVL,10000,14,14,12.363,9986,0,0,9986,0,0,10000,1
+"crescente",10000,remoção,AVL,5000,14,13,11.480,876,0,204,226,108,115,5000,4
+"crescente",10000,inserção,Rubro-Negra,10000,24,14,12.885,9976,49877,0,0,0,0,10000,1
+"crescente",10000,remoção,Rubro-Negra,5000,15,13,11.481,985,12195,0,0,0,0,5000,3
+"crescente",100000,inserção,AVL,100000,17,17,15.689,99983,0,0,99983,0,0,100000,1
+"crescente",100000,remoção,AVL,50000,17,16,14.805,8337,0,1944,1909,1130,1112,50000,4
+"crescente",100000,inserção,Rubro-Negra,100000,31,17,16.096,99969,499846,0,0,0,0,100000,1
+"crescente",100000,remoção,Rubro-Negra,50000,19,16,14.823,9193,120908,0,0,0,0,50000,3
+"decrescente",1000,inserção,AVL,1000,10,10,8.987,990,0,990,0,0,0,1000,1
+"decrescente",1000,remoção,AVL,500,10,9,8.112,86,0,22,26,14,5,500,3
+"decrescente",1000,inserção,Rubro-Negra,1000,17,10,9.406,983,4909,0,0,0,0,1000,1
+"decrescente",1000,remoção,Rubro-Negra,500,10,9,8.124,94,1195,0,0,0,0,500,2
+"decrescente",10000,inserção,AVL,10000,14,14,12.363,9986,0,9986,0,0,0,10000,1
+"decrescente",10000,remoção,AVL,5000,14,13,11.480,902,0,191,205,129,124,5000,3
+"decrescente",10000,inserção,Rubro-Negra,10000,24,14,12.885,9976,49877,0,0,0,0,10000,1
+"decrescente",10000,remoção,Rubro-Negra,5000,14,13,11.488,986,12126,0,0,0,0,5000,3
+"decrescente",100000,inserção,AVL,100000,17,17,15.689,99983,0,99983,0,0,0,100000,1
+"decrescente",100000,remoção,AVL,50000,17,16,14.807,8332,0,1910,1932,1128,1117,50000,4
+"decrescente",100000,inserção,Rubro-Negra,100000,31,17,16.096,99969,499846,0,0,0,0,100000,1
+"decrescente",100000,remoção,Rubro-Negra,50000,18,16,14.803,9272,120868,0,0,0,0,50000,3
+"aleatória",1000,inserção,AVL,1000,12,10,9.199,698,0,126,120,112,114,1000,2
+"aleatória",1000,remoção,AVL,500,11,9,8.174,200,0,40,42,31,28,500,4
+"aleatória",1000,inserção,Rubro-Negra,1000,12,10,9.254,598,2324,0,0,0,0,1000,2
+"aleatória",1000,remoção,Rubro-Negra,500,12,9,8.248,192,932,0,0,0,0,500,3
+"aleatória",10000,inserção,AVL,10000,16,14,12.577,6808,0,1167,1215,1134,1079,10000,2
+"aleatória",10000,remoção,AVL,5000,15,13,11.553,1864,0,390,432,245,276,5000,6
+"aleatória",10000,inserção,Rubro-Negra,10000,16,14,12.629,5764,23159,0,0,0,0,10000,2
+"aleatória",10000,remoção,Rubro-Negra,5000,15,13,11.604,1742,8756,0,0,0,0,5000,3
+"aleatória",100000,inserção,AVL,100000,20,17,15.954,70254,0,11593,11809,11761,11665,100000,2
+"aleatória",100000,remoção,AVL,50000,19,16,14.903,18943,0,4153,4064,2694,2669,50000,7
+"aleatória",100000,inserção,Rubro-Negra,100000,20,17,15.970,58716,232196,0,0,0,0,100000,2
+"aleatória",100000,remoção,Rubro-Negra,50000,20,16,14.941,18339,88846,0,0,0,0,50000,3
+"em lotes (64 crescentes, lotes embaralhados)",1000,inserção,AVL,1000,11,10,9.185,1034,0,20,912,43,8,1000,2
+"em lotes (64 crescentes, lotes embaralhados)",1000,remoção,AVL,500,11,9,8.210,125,0,32,31,14,17,500,4
+"em lotes (64 crescentes, lotes embaralhados)",1000,inserção,Rubro-Negra,1000,16,10,9.523,1713,4672,0,0,0,0,1000,2
+"em lotes (64 crescentes, lotes embaralhados)",1000,remoção,Rubro-Negra,500,12,9,8.256,201,1311,0,0,0,0,500,3
+"em lotes (64 crescentes, lotes embaralhados)",10000,inserção,AVL,10000,15,14,12.534,10476,0,223,9021,564,52,10000,2
+"em lotes (64 crescentes, lotes embaralhados)",10000,remoção,AVL,5000,15,13,11.577,1188,0,326,280,139,152,5000,6
+"em lotes (64 crescentes, lotes embaralhados)",10000,inserção,Rubro-Negra,10000,20,14,12.943,18306,47224,0,0,0,0,10000,2
+"em lotes (64 crescentes, lotes embaralhados)",10000,remoção,Rubro-Negra,5000,16,13,11.600,1817,12901,0,0,0,0,5000,3
+"em lotes (64 crescentes, lotes embaralhados)",100000,inserção,AVL,100000,19,17,15.979,130616,0,1048,65640,31430,534,100000,2
+"em lotes (64 crescentes, lotes embaralhados)",100000,remoção,AVL,50000,19,16,14.920,15755,0,5084,2209,2068,2163,50000,8
+"em lotes (64 crescentes, lotes embaralhados)",100000,inserção,Rubro-Negra,100000,24,17,16.273,188153,472471,0,0,0,0,100000,2
+"em lotes (64 crescentes, lotes embaralhados)",100000,remoção,Rubro-Negra,50000,20,16,14.927,18532,129027,0,0,0,0,50000,3
+"alternada (extremos)",1000,inserção,AVL,1000,12,10,9.267,1605,0,189,182,305,312,1000,2
+"alternada (extremos)",1000,remoção,AVL,500,11,9,8.204,193,0,57,46,21,24,500,4
+"alternada (extremos)",1000,inserção,Rubro-Negra,1000,17,10,9.406,1477,4909,0,0,0,0,1000,2
+"alternada (extremos)",1000,remoção,Rubro-Negra,500,11,9,8.194,115,1214,0,0,0,0,500,2
+"alternada (extremos)",10000,inserção,AVL,10000,17,14,12.740,16221,0,1880,1865,3111,3127,10000,2
+"alternada (extremos)",10000,remoção,AVL,5000,15,13,11.610,1928,0,579,557,189,207,5000,7
+"alternada (extremos)",10000,inserção,Rubro-Negra,10000,24,14,12.885,14967,49877,0,0,0,0,10000,2
+"alternada (extremos)",10000,remoção,Rubro-Negra,5000,15,13,11.486,997,12211,0,0,0,0,5000,3
+"alternada (extremos)",100000,inserção,AVL,100000,21,17,16.242,162462,0,18758,18738,31231,31252,100000,2
+"alternada (extremos)",100000,remoção,AVL,50000,19,16,14.981,19142,0,5702,5794,1911,1912,50000,7
+"alternada (extremos)",100000,inserção,Rubro-Negra,100000,31,17,16.096,149958,499846,0,0,0,0,100000,2
+"alternada (extremos)",100000,remoção,Rubro-Negra,50000,19,16,14.863,9212,120849,0,0,0,0,50000,3
+
+# linha de base: BST comum sem balanceamento (só inserção; -1 = não medido por custo O(n^2))
+conjunto,N,altura_bst,prof_media_bst
+"crescente",1000,1000,500.500
+"crescente",10000,10000,5000.500
+"crescente",100000,-1,0.000
+"decrescente",1000,1000,500.500
+"decrescente",10000,10000,5000.500
+"decrescente",100000,-1,0.000
+"aleatória",1000,22,12.160
+"aleatória",10000,29,15.940
+"aleatória",100000,40,20.768
+"em lotes (64 crescentes, lotes embaralhados)",1000,323,129.172
+"em lotes (64 crescentes, lotes embaralhados)",10000,641,271.130
+"em lotes (64 crescentes, lotes embaralhados)",100000,965,426.811
+"alternada (extremos)",1000,1000,500.500
+"alternada (extremos)",10000,10000,5000.500
+"alternada (extremos)",100000,-1,0.000
+
+# tempos (ms), N=100000, mediana de 11 execuções; buscas = 1.000.000 de buscas bem-sucedidas
+conjunto,arvore,insercao_ms,busca_1M_ms,remocao_ms
+"crescente",AVL,32.92,504.94,47.94
+"crescente",Rubro-Negra,21.12,416.27,31.19
+"decrescente",AVL,28.35,422.44,40.87
+"decrescente",Rubro-Negra,22.68,463.20,35.43
+"aleatória",AVL,80.23,504.39,48.45
+"aleatória",Rubro-Negra,59.11,482.30,34.85
+"em lotes (64 crescentes, lotes embaralhados)",AVL,40.32,543.41,51.23
+"em lotes (64 crescentes, lotes embaralhados)",Rubro-Negra,27.33,470.31,33.36
+"alternada (extremos)",AVL,34.13,496.74,46.63
+"alternada (extremos)",Rubro-Negra,30.98,502.29,43.12

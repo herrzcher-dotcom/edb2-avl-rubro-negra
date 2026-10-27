@@ -1,0 +1,84 @@
+
+=== Amazon Black Friday - Registro de encomendas (árvores balanceadas) ===
+
+[Rubro-Negra | nós: 0 | altura: 0]
+Opção: 1
+Identificadores a inserir (separados por espaço): 10 20 30 40 50 25
+  ✔ 10 inserido
+  ✔ 20 inserido
+   ↳ RB: tio negro e nó em linha reta -> caso 3: pai 20 fica negro, avô 10 fica rubro e rotação à esquerda no avô
+  ✔ 30 inserido
+   ↳ RB: nó 40 (rubro) com pai 30 rubro e tio 10 rubro -> caso 1: recolore pai e tio (negro) e avô 20 (rubro)
+  ✔ 40 inserido
+   ↳ RB: tio negro e nó em linha reta -> caso 3: pai 40 fica negro, avô 30 fica rubro e rotação à esquerda no avô
+  ✔ 50 inserido
+   ↳ RB: nó 25 (rubro) com pai 30 rubro e tio 50 rubro -> caso 1: recolore pai e tio (negro) e avô 40 (rubro)
+  ✔ 25 inserido
+
+[Rubro-Negra | nós: 6 | altura: 4]
+Opção: 5
+Legenda: (R) = rubro/vermelho, (N) = negro/preto. E = filho esquerdo, D = filho direito.
+20 (N)
+├── E: 10 (N)
+└── D: 40 (R)
+    ├── E: 30 (N)
+    │   └── E: 25 (R)
+    └── D: 50 (N)
+
+[Rubro-Negra | nós: 6 | altura: 4]
+Opção: 4
+Em ordem (6 elementos): 10, 20, 25, 30, 40, 50
+
+[Rubro-Negra | nós: 6 | altura: 4]
+Opção: 1
+Identificadores a inserir (separados por espaço): 30 25 abc
+  ! "abc" não é um identificador válido (inteiro) - ignorado
+  ✘ 30 já existe - inserção ignorada (duplicado)
+  ✘ 25 já existe - inserção ignorada (duplicado)
+
+[Rubro-Negra | nós: 6 | altura: 4]
+Opção: 3
+Identificadores a buscar (separados por espaço): 25 99
+  ✔ 25 encontrado
+  ✘ 99 não encontrado
+
+[Rubro-Negra | nós: 6 | altura: 4]
+Opção: 2
+Identificadores a remover (separados por espaço): 99 10 40
+  ✘ 99 não encontrado - nada foi removido
+   ↳ RB: duplo-negro; irmão 40 rubro -> caso 1: recolore e rotação à esquerda em 20
+   ↳ RB: sobrinho distante negro -> caso 3: recolore e rotação à direita em 30
+   ↳ RB: sobrinho distante rubro -> caso 4: irmão herda a cor do pai, rotação à esquerda em 20; termina
+  ✔ 10 removido
+   ↳ RB: duplo-negro; irmão 25 rubro -> caso 1: recolore e rotação à direita em 50
+   ↳ RB: irmão 30 negro com sobrinhos negros -> caso 2: irmão vira rubro; problema sobe
+  ✔ 40 removido
+
+[Rubro-Negra | nós: 4 | altura: 3]
+Opção: 5
+Legenda: (R) = rubro/vermelho, (N) = negro/preto. E = filho esquerdo, D = filho direito.
+25 (N)
+├── E: 20 (N)
+└── D: 50 (N)
+    └── E: 30 (R)
+
+[Rubro-Negra | nós: 4 | altura: 3]
+Opção: 4
+Em ordem (4 elementos): 20, 25, 30, 50
+
+[Rubro-Negra | nós: 4 | altura: 3]
+Opção: 6
+Árvore: Rubro-Negra
+Nós: 4  |  altura: 3  (mínima possível: 3)  |  profundidade média: 2.00
+Inserções: 6 efetivas, 2 duplicadas ignoradas
+Remoções:  2 efetivas, 1 de inexistentes ignoradas
+Rotações (simples; dupla conta 2): 6
+Recolorações: 23
+
+[Rubro-Negra | nós: 4 | altura: 3]
+Opção: 7
+✔ Todas as invariantes da Rubro-Negra estão satisfeitas.
+
+[Rubro-Negra | nós: 4 | altura: 3]
+Opção: 0
+Até logo!

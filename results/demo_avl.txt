@@ -1,0 +1,78 @@
+
+=== Amazon Black Friday - Registro de encomendas (árvores balanceadas) ===
+
+[AVL | nós: 0 | altura: 0]
+Opção: 1
+Identificadores a inserir (separados por espaço): 10 20 30 40 50 25
+  ✔ 10 inserido
+  ✔ 20 inserido
+   ↳ AVL: nó 10 com fb=-2 -> caso RR (rotação simples à esquerda em 10)
+  ✔ 30 inserido
+  ✔ 40 inserido
+   ↳ AVL: nó 30 com fb=-2 -> caso RR (rotação simples à esquerda em 30)
+  ✔ 50 inserido
+   ↳ AVL: nó 20 com fb=-2 e filho direito com fb>0 -> caso RL (rotação à direita em 40, depois à esquerda em 20)
+  ✔ 25 inserido
+
+[AVL | nós: 6 | altura: 3]
+Opção: 5
+Legenda: h = altura do nó, fb = fator de balanceamento. E = filho esquerdo, D = filho direito.
+30 (h=3, fb=0)
+├── E: 20 (h=2, fb=0)
+│   ├── E: 10 (h=1, fb=0)
+│   └── D: 25 (h=1, fb=0)
+└── D: 40 (h=2, fb=-1)
+    └── D: 50 (h=1, fb=0)
+
+[AVL | nós: 6 | altura: 3]
+Opção: 4
+Em ordem (6 elementos): 10, 20, 25, 30, 40, 50
+
+[AVL | nós: 6 | altura: 3]
+Opção: 1
+Identificadores a inserir (separados por espaço): 30 25 abc
+  ! "abc" não é um identificador válido (inteiro) - ignorado
+  ✘ 30 já existe - inserção ignorada (duplicado)
+  ✘ 25 já existe - inserção ignorada (duplicado)
+
+[AVL | nós: 6 | altura: 3]
+Opção: 3
+Identificadores a buscar (separados por espaço): 25 99
+  ✔ 25 encontrado
+  ✘ 99 não encontrado
+
+[AVL | nós: 6 | altura: 3]
+Opção: 2
+Identificadores a remover (separados por espaço): 99 10 40
+  ✘ 99 não encontrado - nada foi removido
+  ✔ 10 removido
+  ✔ 40 removido
+
+[AVL | nós: 4 | altura: 3]
+Opção: 5
+Legenda: h = altura do nó, fb = fator de balanceamento. E = filho esquerdo, D = filho direito.
+30 (h=3, fb=+1)
+├── E: 20 (h=2, fb=-1)
+│   └── D: 25 (h=1, fb=0)
+└── D: 50 (h=1, fb=0)
+
+[AVL | nós: 4 | altura: 3]
+Opção: 4
+Em ordem (4 elementos): 20, 25, 30, 50
+
+[AVL | nós: 4 | altura: 3]
+Opção: 6
+Árvore: AVL
+Nós: 4  |  altura: 3  (mínima possível: 3)  |  profundidade média: 2.00
+Inserções: 6 efetivas, 2 duplicadas ignoradas
+Remoções:  2 efetivas, 1 de inexistentes ignoradas
+Rotações (simples; dupla conta 2): 4
+Casos AVL tratados: LL=0  RR=2  LR=0  RL=1
+
+[AVL | nós: 4 | altura: 3]
+Opção: 7
+✔ Todas as invariantes da AVL estão satisfeitas.
+
+[AVL | nós: 4 | altura: 3]
+Opção: 0
+Até logo!
